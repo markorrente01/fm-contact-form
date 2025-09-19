@@ -3,11 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
   <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="/src/stylesheets/style.css">
 </head>
 <body>
-  
+  <main class="toast-is-active">
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+
+    <section class="name-container">
+      <div class="fname">
+        <label for="firstName">First Name  <span class="asterisks">*</span></label>
+        <div class="fname-container">
+          <input type="text" id="firstName" name="firstName"> 
+          <br>
+          <small id="fnameError">This field is required</small>
+        </div>
+      </div>
+
+      <div class="Lname">
+        <label for="lastName">Last Name  <span class="asterisks">*</span></label>
+        <div class="Lname-container">
+          <input type="text" id="lastName" name="lastName">
+          <br>
+          <small id="LnameError">This field is required</small>
+        </div>
+      </div>
+    </section>
+    
+    <section class="mail-container">
+      <div class="mail">
+        <label for="email">Email Address  <span class="asterisks">*</span></label>
+        <div class="mail-container">
+          <input type="text" id="email" name="email">
+          <br>
+          <small id="mailError">Please enter a valid email address</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="query-container">
+      <p class="query-heading">Query Type  <span class="asterisks">*</span></p>
+      <div class="query-subContainer">
+        <label class="query-label">
+          <input type="radio" id="generalEnquiry" name="query">
+          <span class="custom-radio"></span>
+          General Enquiry
+        </label>
+
+        <label class="query-label">
+          <input type="radio" id="supportRequest" name="query">
+          <span class="custom-radio"></span>
+          Support Request
+        </label>
+      </div>
+
+      <small id="queryError">Please select a query type</small>
+    </section>
+
+    <section class="message-container">
+      <p class="message-heading">Message  <span class="asterisks">*</span></p>
+      <textarea class=""></textarea>
+      <br>
+      <small id="messageError">This field is required</small>
+    </section>
+
+    <section class="consent-container">
+      <label class="consent-label">
+          <input type="checkbox" id="consentCheck">
+          <span class="custom-checkbox"></span>
+          <p class="consent-text">I consent to being contacted by the team  <span class="asterisks">*</span></p>
+      </label>
+        <small id="consentError">To submit this form, please consent to being contacted</small>
+    </section>
+
+    <button id="submit" class="submitBtn">Submit</button>
+
+    <article class="toast">
+      <div class="toast-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21">
+          <path fill="#fff" d="M14.28 7.72a.748.748 0 0 1 0 1.06l-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.75.75 0 0 1 1.06 0Zm5.47 2.78A9.75 9.75 0 1 1 10 .75a9.76 9.76 0 0 1 9.75 9.75Zm-1.5 0A8.25 8.25 0 1 0 10 18.75a8.26 8.26 0 0 0 8.25-8.25Z"/>
+        </svg>
+        <p class="toast-title">Message Sent!</p>
+      </div>
+      <p class="toast-info">Thanks for completing the form. We'll be in touch soon!</p>
+    </article>
+  </main>
 <script src="/src/main.js" type="module"></script>
 </body>
 </html>

@@ -1,0 +1,18 @@
+@use 'variables' as v;
+
+@mixin input-gap($gap:0, $dir: unset){
+    display: flex;
+    flex-direction: $dir;
+    gap: $gap;
+}
+@mixin flex($dir: unset){
+    display: flex;
+    flex-direction: $dir;
+}
+@mixin customBox($radius: unset){
+    width: 19px;
+    height: 19px;
+    border-radius: $radius;
+    border: 2px solid v.$Grey-op;
+    position: relative;
+}

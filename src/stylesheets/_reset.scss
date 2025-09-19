@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; // keep browser default (16px)
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  background-color: transparent;
+  color: inherit;
+}
+
+/* Form controls should inherit font styles */
+button,
+input,
+select,
+textarea {
+  font: inherit;   // inherit font-family, size, weight, etc.
+  color: inherit;  // follow parent text color
+  background: none;
+//   border: none;
+  outline: none;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove link underline by default */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Media elements scale nicely */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+small{
+  display: block;
+}
