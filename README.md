@@ -35,8 +35,8 @@ Users should be able to:
 ![desktop](/screenshots/contact-form-ui-desktop.png)
 
 ### Links
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [fm solution url](https://www.frontendmentor.io/solutions/mobile-first-vanilla-js-regex-validation-sD2DgrUC3R)
+- [Live site url](https://fm-contact-form-ten.vercel.app/)
 
 ### Built with
 - Vanilla js
