@@ -1,7 +1,6 @@
 @use 'variables' as v;
 @import 'mixin';
 @import 'reset';
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
 html {
   font-family: "Karla", sans-serif;
@@ -140,6 +139,9 @@ input[type="checkbox"]:checked + .custom-checkbox:after{
 input[type="checkbox"]:checked + .custom-checkbox{
   background-color: v.$Green-600;
 }
+.consent-text{
+  user-select: none;
+}
 .submitBtn{
   display: block;
   width: 100%;
@@ -149,15 +151,14 @@ input[type="checkbox"]:checked + .custom-checkbox{
   padding: 1rem 0;
   font-size: 1.06rem;
   font-weight: v.$f-weight-l;
-  border: none;
-  transition: background-color .3s linear;
+  border: none
 }
 /* error handling */
 small{
   margin-top: .5rem;
   color: v.$Red;
-  display: none;
-  transition: display .4s ease;
+  opacity: 0;
+  transition: opacity .4s ease;
 }
 .error-active input{
   border: v.$border-e;
@@ -166,7 +167,10 @@ small{
   border: v.$border-e;
 }
 .error-active small{
-  display: block;
+  opacity: 1;
+}
+.input-check{
+  border: v.$border-e;
 }
 /*****************/
 /* toast */
@@ -184,13 +188,15 @@ small{
   transform: translateX(-50%);
   left: 50%;
   top: -6.5rem;
-  display: none;
+  opacity: 0;
+  display: flex;
+  transition: all .4s ease;
 }
 main.toast-is-active{
   margin-top: 7rem;
 }
 main.toast-is-active .toast{
-  display: flex;
+  opacity: 1;
 }
 .toast-header{
   @include flex(row);
@@ -198,9 +204,15 @@ main.toast-is-active .toast{
   font-weight: v.$f-weight-l;
   margin-bottom: .3rem;
 }
-
 /********/
-
+.tabItem:focus-visible {
+    outline: 2px solid v.$Green-600;
+    outline-offset: 2px;
+    border: none;      
+}
+.submitBtn:focus-visible{
+  outline: 2px solid v.$Grey-900;
+}
 @media (prefers-reduced-motion: reduce) {
   html{
     scroll-behavior: auto;

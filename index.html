@@ -3,21 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Have a question or need support? Use our contact form to send your query and we’ll respond as quickly as possible.">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <!-- load google font asap to avoid flash display of default fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Contact form</title>
   <link rel="stylesheet" href="/src/stylesheets/style.css">
 </head>
 <body>
-  <main class="toast-is-active">
+  <main class="">
     <header>
       <h1>Contact Us</h1>
     </header>
-
+    <form>
     <section class="name-container">
       <div class="fname">
         <label for="firstName">First Name  <span class="asterisks">*</span></label>
         <div class="fname-container">
-          <input type="text" id="firstName" name="firstName"> 
+          <input type="text" id="firstName" name="firstName" class="tabItem" tabindex="0"> 
           <br>
           <small id="fnameError">This field is required</small>
         </div>
@@ -26,7 +31,7 @@
       <div class="Lname">
         <label for="lastName">Last Name  <span class="asterisks">*</span></label>
         <div class="Lname-container">
-          <input type="text" id="lastName" name="lastName">
+          <input type="text" id="lastName" name="lastName" class="tabItem" tabindex="0">
           <br>
           <small id="LnameError">This field is required</small>
         </div>
@@ -37,7 +42,7 @@
       <div class="mail">
         <label for="email">Email Address  <span class="asterisks">*</span></label>
         <div class="mail-container">
-          <input type="text" id="email" name="email">
+          <input type="text" id="email" name="email" class="tabItem" tabindex="0">
           <br>
           <small id="mailError">Please enter a valid email address</small>
         </div>
@@ -47,13 +52,13 @@
     <section class="query-container">
       <p class="query-heading">Query Type  <span class="asterisks">*</span></p>
       <div class="query-subContainer">
-        <label class="query-label">
-          <input type="radio" id="generalEnquiry" name="query">
+        <label class="query-label tabItem" for="generalQuery" tabindex="0">
+          <input type="radio" id="generalQuery" name="query">
           <span class="custom-radio"></span>
           General Enquiry
         </label>
 
-        <label class="query-label">
+        <label class="query-label tabItem" for="supportRequest" tabindex="0">
           <input type="radio" id="supportRequest" name="query">
           <span class="custom-radio"></span>
           Support Request
@@ -64,14 +69,14 @@
     </section>
 
     <section class="message-container">
-      <p class="message-heading">Message  <span class="asterisks">*</span></p>
-      <textarea class=""></textarea>
+      <label class="message-heading" for="message">Message  <span class="asterisks">*</span></label>
+      <textarea id="message" class="tabItem" tabindex="0"></textarea>
       <br>
       <small id="messageError">This field is required</small>
     </section>
 
     <section class="consent-container">
-      <label class="consent-label">
+      <label class="consent-label tabItem" tabindex="0">
           <input type="checkbox" id="consentCheck">
           <span class="custom-checkbox"></span>
           <p class="consent-text">I consent to being contacted by the team  <span class="asterisks">*</span></p>
@@ -79,8 +84,8 @@
         <small id="consentError">To submit this form, please consent to being contacted</small>
     </section>
 
-    <button id="submit" class="submitBtn">Submit</button>
-
+    <button id="submit" class="submitBtn tabItem" tabindex="0">Submit</button>
+    </form>
     <article class="toast">
       <div class="toast-header">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21">
